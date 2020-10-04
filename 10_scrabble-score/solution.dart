@@ -1,13 +1,13 @@
 int score(String string) {
+  int counter = 0;
+
   if (string.split('').length != 0) {
-    int counter = 0;
     for (String letter in string.split('')) {
       counter = counter + scoreValues[letter.toUpperCase()];
     }
-    return counter;
-  } else {
-    return 0;
   }
+
+  return counter;
 }
 
 Map<String, int> scoreValues = {
